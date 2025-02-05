@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mental Well-Being Quiz</title>
+</head>
+<body>
+    <h1>Mental Well-Being Quiz</h1>
+    <div class="container">
+        <h2>let's begin!</h2>
+        <form action="{{ url_for('submit_quiz') }}" method="POST">
+            <input type="hidden" name="quiz_type" value="quiz">
+            <label>1. How do you generally feel about your mental well-being compared to when you were younger?</label>
+            <input type="radio" name="wellBeing" value="Much better"> Much better<br>
+            <input type="radio" name="wellBeing" value="About the same"> About the same<br>
+            <input type="radio" name="wellBeing" value="Somewhat worse"> Somewhat worse<br>
+            <input type="radio" name="wellBeing" value="Much worse"> Much worse<br><br>
+
+            <label>2. How frequently do you experience feelings of stress or anxiety in your daily life?</label>
+            <input type="radio" name="stressAnxiety" value="Rarely"> Rarely<br>
+            <input type="radio" name="stressAnxiety" value="Occasionally"> Occasionally<br>
+            <input type="radio" name="stressAnxiety" value="Frequently"> Frequently<br>
+            <input type="radio" name="stressAnxiety" value="Almost always"> Almost always<br><br>
+
+            <label>3. How well do you feel you manage work-life balance?</label>
+            <input type="radio" name="workLifeBalance" value="Very well"> Very well<br>
+            <input type="radio" name="workLifeBalance" value="Adequately"> Adequately<br>
+            <input type="radio" name="workLifeBalance" value="It’s challenging but manageable"> It’s challenging but manageable<br>
+            <input type="radio" name="workLifeBalance" value="Poorly"> Poorly<br><br>
+
+            <label>4. Do you feel that your physical health impacts your mental well-being?</label>
+            <input type="radio" name="physicalImpact" value="Not at all"> Not at all<br>
+            <input type="radio" name="physicalImpact" value="Occasionally"> Occasionally<br>
+            <input type="radio" name="physicalImpact" value="Frequently"> Frequently<br>
+            <input type="radio" name="physicalImpact" value="It has a significant impact"> It has a significant impact<br><br>
+
+            <label>5. How often do you engage in social activities or interactions with friends and family?</label>
+            <input type="radio" name="socialActivities" value="Daily"> Daily<br>
+            <input type="radio" name="socialActivities" value="Weekly"> Weekly<br>
+            <input type="radio" name="socialActivities" value="A few times a month"> A few times a month<br>
+            <input type="radio" name="socialActivities" value="Rarely"> Rarely<br><br>
+
+            <label>6. Do you feel satisfied with the support you receive from your social circle?</label>
+            <input type="radio" name="socialSupport" value="Very satisfied"> Very satisfied<br>
+            <input type="radio" name="socialSupport" value="Somewhat satisfied"> Somewhat satisfied<br>
+            <input type="radio" name="socialSupport" value="Not satisfied enough"> Not satisfied enough<br>
+            <input type="radio" name="socialSupport" value="I feel isolated"> I feel isolated<br><br>
+
+            <label>7. How often do you experience trouble sleeping, such as insomnia or restless nights?</label>
+            <input type="radio" name="sleepTrouble" value="Never"> Never<br>
+            <input type="radio" name="sleepTrouble" value="Occasionally"> Occasionally<br>
+            <input type="radio" name="sleepTrouble" value="Frequently"> Frequently<br>
+            <input type="radio" name="sleepTrouble" value="Almost every night"> Almost every night<br><br>
+
+            <label>8. Do you feel more stressed or overwhelmed by financial responsibilities as you’ve aged?</label>
+            <input type="radio" name="financialStress" value="Not at all"> Not at all<br>
+            <input type="radio" name="financialStress" value="A little bit"> A little bit<br>
+            <input type="radio" name="financialStress" value="Frequently"> Frequently<br>
+            <input type="radio" name="financialStress" value="Very stressed"> Very stressed<br><br>
+
+            <label>9. How do you perceive your ability to adapt to changes in your personal or professional life?</label>
+            <input type="radio" name="adaptability" value="Very adaptable"> Very adaptable<br>
+            <input type="radio" name="adaptability" value="Moderately adaptable"> Moderately adaptable<br>
+            <input type="radio" name="adaptability" value="Struggling to adapt"> Struggling to adapt<br>
+            <input type="radio" name="adaptability" value="Finding it very difficult"> Finding it very difficult<br><br>
+
+            <label>10. Do you find yourself more forgetful or distracted compared to earlier stages in life?</label>
+            <input type="radio" name="forgetfulness" value="No, I feel the same"> No, I feel the same<br>
+            <input type="radio" name="forgetfulness" value="Occasionally, but nothing major"> Occasionally, but nothing major<br>
+            <input type="radio" name="forgetfulness" value="Frequently, and it’s concerning"> Frequently, and it’s concerning<br>
+            <input type="radio" name="forgetfulness" value="Yes, it has become a serious issue"> Yes, it has become a serious issue<br><br>
+
+            <label>11. Do you regularly engage in any activities that promote relaxation or reduce stress (e.g., meditation, exercise)?</label>
+            <input type="radio" name="relaxationActivities" value="Yes, daily"> Yes, daily<br>
+            <input type="radio" name="relaxationActivities" value="Yes, occasionally"> Yes, occasionally<br>
+            <input type="radio" name="relaxationActivities" value="Rarely"> Rarely<br>
+            <input type="radio" name="relaxationActivities" value="No, not at all"> No, not at all<br><br>
+
+            <label>12. Do you feel confident in handling unexpected challenges that arise in your life?</label>
+            <input type="radio" name="confidence" value="Always confident"> Always confident<br>
+            <input type="radio" name="confidence" value="Mostly confident"> Mostly confident<br>
+            <input type="radio" name="confidence" value="Sometimes uncertain"> Sometimes uncertain<br>
+            <input type="radio" name="confidence" value="Frequently overwhelmed"> Frequently overwhelmed<br><br>
+
+            <button type="submit">GO!</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 Execute Humane | Enhancing Mental Well-Being</p>
+    </footer>
+
+</body>
+</html>

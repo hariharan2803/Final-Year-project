@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mental Well-Being Quiz</title>
+</head>
+<body>
+    <h1>Mental Well-Being Quiz</h1>
+    <div class="container">
+        <h2>let's begin!</h2>
+        <form action="{{ url_for('submit_quiz') }}" method="POST">
+            <input type="hidden" name="quiz_type" value="quiz">
+            <label>1. How often do you feel emotionally supported by family and friends?</label>
+            <input type="radio" name="emotionalSupport" value="Always"> Always<br>
+            <input type="radio" name="emotionalSupport" value="Often"> Often<br>
+            <input type="radio" name="emotionalSupport" value="Sometimes"> Sometimes<br>
+            <input type="radio" name="emotionalSupport" value="Rarely"> Rarely<br><br>
+
+            <label>2. How satisfied are you with your current level of physical activity?</label>
+            <input type="radio" name="physicalActivitySatisfaction" value="Very satisfied"> Very satisfied<br>
+            <input type="radio" name="physicalActivitySatisfaction" value="Moderately satisfied"> Moderately satisfied<br>
+            <input type="radio" name="physicalActivitySatisfaction" value="Slightly dissatisfied"> Slightly dissatisfied<br>
+            <input type="radio" name="physicalActivitySatisfaction" value="Not satisfied"> Not satisfied<br><br>
+
+            <label>3. How often do you feel lonely or isolated?</label>
+            <input type="radio" name="loneliness" value="Never"> Never<br>
+            <input type="radio" name="loneliness" value="Occasionally"> Occasionally<br>
+            <input type="radio" name="loneliness" value="Frequently"> Frequently<br>
+            <input type="radio" name="loneliness" value="Almost always"> Almost always<br><br>
+
+            <label>4. How often do you have trouble remembering important tasks or events?</label>
+            <input type="radio" name="memoryTrouble" value="Never"> Never<br>
+            <input type="radio" name="memoryTrouble" value="Rarely"> Rarely<br>
+            <input type="radio" name="memoryTrouble" value="Sometimes"> Sometimes<br>
+            <input type="radio" name="memoryTrouble" value="Frequently"> Frequently<br><br>
+
+            <label>5. How well do you sleep at night?</label>
+            <input type="radio" name="sleepQuality" value="I sleep well and feel rested"> I sleep well and feel rested<br>
+            <input type="radio" name="sleepQuality" value="I sometimes wake up during the night"> I sometimes wake up during the night<br>
+            <input type="radio" name="sleepQuality" value="I have trouble falling asleep"> I have trouble falling asleep<br>
+            <input type="radio" name="sleepQuality" value="I often wake up feeling tired"> I often wake up feeling tired<br><br>
+
+            <label>6. Do you feel that your energy levels are sufficient for daily activities?</label>
+            <input type="radio" name="energyLevels" value="Always"> Always<br>
+            <input type="radio" name="energyLevels" value="Most of the time"> Most of the time<br>
+            <input type="radio" name="energyLevels" value="Sometimes"> Sometimes<br>
+            <input type="radio" name="energyLevels" value="Rarely"> Rarely<br><br>
+
+            <label>7. How would you rate your ability to manage stress and anxiety?</label>
+            <input type="radio" name="stressManagement" value="Very good"> Very good<br>
+            <input type="radio" name="stressManagement" value="Fairly good"> Fairly good<br>
+            <input type="radio" name="stressManagement" value="Needs improvement"> Needs improvement<br>
+            <input type="radio" name="stressManagement" value="Poor"> Poor<br><br>
+
+            <label>8. How often do you engage in activities that you enjoy (e.g., hobbies, socializing)?</label>
+            <input type="radio" name="enjoymentFrequency" value="Daily"> Daily<br>
+            <input type="radio" name="enjoymentFrequency" value="Weekly"> Weekly<br>
+            <input type="radio" name="enjoymentFrequency" value="Monthly"> Monthly<br>
+            <input type="radio" name="enjoymentFrequency" value="Rarely"> Rarely<br><br>
+
+            <label>9. How confident are you in managing your health (e.g., medications, doctor visits)?</label>
+            <input type="radio" name="healthManagementConfidence" value="Very confident"> Very confident<br>
+            <input type="radio" name="healthManagementConfidence" value="Somewhat confident"> Somewhat confident<br>
+            <input type="radio" name="healthManagementConfidence" value="Not very confident"> Not very confident<br>
+            <input type="radio" name="healthManagementConfidence" value="Not confident at all"> Not confident at all<br><br>
+
+            <label>10. How often do you feel overwhelmed by changes in your physical or cognitive abilities?</label>
+            <input type="radio" name="overwhelmedChanges" value="Never"> Never<br>
+            <input type="radio" name="overwhelmedChanges" value="Rarely"> Rarely<br>
+            <input type="radio" name="overwhelmedChanges" value="Sometimes"> Sometimes<br>
+            <input type="radio" name="overwhelmedChanges" value="Often"> Often<br><br>
+
+            <label>11. How often do you experience feelings of sadness or depression?</label>
+            <input type="radio" name="sadnessDepression" value="Never"> Never<br>
+            <input type="radio" name="sadnessDepression" value="Occasionally"> Occasionally<br>
+            <input type="radio" name="sadnessDepression" value="Frequently"> Frequently<br>
+            <input type="radio" name="sadnessDepression" value="Almost every day"> Almost every day<br><br>
+
+            <label>12. Do you feel your financial situation affects your mental well-being?</label>
+            <input type="radio" name="financialImpact" value="Not at all"> Not at all<br>
+            <input type="radio" name="financialImpact" value="Slightly"> Slightly<br>
+            <input type="radio" name="financialImpact" value="Moderately"> Moderately<br>
+            <input type="radio" name="financialImpact" value="Significantly"> Significantly<br><br>
+
+            <button type="submit">GO!</button>
+        </form>
+    </div>
+
+    <footer>
+        <p>© 2024 Execute Humane | Enhancing Mental Well-Being</p>
+    </footer>
+
+</body>
+</html>
+

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Execute Humane</title>
+</head>
+<body>
+    <header>
+        <center><h1>Welcome to Execute Humane</h1></center>
+        <b><p> - </p></b>
+        <p><b><center><q class="quote">Make peace of mind a priority</q></center></b></p>
+    </header>
+
+    <div class="container">
+        <h2>How are you feeling today?</h2>
+        <form id="moodForm">
+            <input type="text" id="moodInput" placeholder="Enter your Age :" autocomplete="off">
+            <button type="submit"><img class="i" src="{{ url_for('static', filename='img/brain.jpg') }}" height="70" width="85"/></button>
+        </form>
+        
+        <!-- Section to display the recommendations -->
+        <b><div id="recommendations"></div></b>
+        <a href="/signup">click here to go to the Signup Page</a>.
+    </div>
+
+    <footer>
+        <p>© 2024 Execute Humane | Enhancing Mental Well-Being</p>
+    </footer>
+
+    <script src="{{ url_for('static', filename='js/index.js') }}"></script>
+</body>
+</html>
+
+

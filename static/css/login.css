@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    background: url('/static/img/login.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.7); /* Updated opacity */
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 100%;
+    max-width: 400px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-container h1 {
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: black;
+    
+}
+
+.login-container label {
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 5px;
+}
+
+.login-container input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.login-container button {
+    width: 100%;
+    padding: 10px;
+    background: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease; /* Added transition for animation */
+}
+
+.login-container button:hover {
+    background: #ff784e;
+    transform: scale(1.05); /* Button grows slightly on hover */
+}
+
+.login-container p {
+    text-align: center;
+    margin-top: 10px;
+}
+
+.login-container a {
+    color: #ff5733;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.login-container a:hover {
+    text-decoration: underline;
+}

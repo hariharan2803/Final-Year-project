@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/quiz.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <title>Mental Well-Being Quiz</title>
+</head>
+<body>
+    <h1>Mental Well-Being Quiz</h1>
+    <div class="container">
+        <h2>let's begin!</h2>
+
+        <!-- Form Start -->
+        <form action="{{ url_for('submit_quiz') }}" method="POST">
+            <input type="hidden" name="quiz_type" value="quiz">
+            <label>1. How often do you feel stressed due to academic or work-related tasks?</label><br>
+            <input type="radio" name="academicStress" value="Rarely, I can manage it well." required> Rarely, I can manage it well.<br>
+            <input type="radio" name="academicStress" value="Occasionally, when deadlines are near."> Occasionally, when deadlines are near.<br>
+            <input type="radio" name="academicStress" value="Frequently, juggling everything is hard."> Frequently, juggling everything is hard.<br>
+            <input type="radio" name="academicStress" value="Almost always, I feel overwhelmed."> Almost always, I feel overwhelmed.<br><br>
+
+            <label>2. How satisfied are you with your current work-life balance?</label><br>
+            <input type="radio" name="workLifeBalance" value="Very satisfied, I manage both well." required> Very satisfied, I manage both well.<br>
+            <input type="radio" name="workLifeBalance" value="Moderately satisfied, but it could be better."> Moderately satisfied, but it could be better.<br>
+            <input type="radio" name="workLifeBalance" value="It’s difficult, I often feel stressed."> It’s difficult, I often feel stressed.<br>
+            <input type="radio" name="workLifeBalance" value="Dissatisfied, I have no time for myself."> Dissatisfied, I have no time for myself.<br><br>
+
+            <label>3. How often do you find it difficult to concentrate on tasks?</label><br>
+            <input type="radio" name="concentrationDifficulty" value="Rarely, I’m focused most of the time." required> Rarely, I’m focused most of the time.<br>
+            <input type="radio" name="concentrationDifficulty" value="Sometimes, but I manage to refocus."> Sometimes, but I manage to refocus.<br>
+            <input type="radio" name="concentrationDifficulty" value="Frequently, distractions are common."> Frequently, distractions are common.<br>
+            <input type="radio" name="concentrationDifficulty" value="Almost always, I find it hard to stay focused."> Almost always, I find it hard to stay focused.<br><br>
+
+            <label>4. How many hours of sleep do you usually get during the week?</label><br>
+            <input type="radio" name="sleepHours" value="More than 8 hours." required> More than 8 hours.<br>
+            <input type="radio" name="sleepHours" value="6-8 hours."> 6-8 hours.<br>
+            <input type="radio" name="sleepHours" value="4-6 hours."> 4-6 hours.<br>
+            <input type="radio" name="sleepHours" value="Less than 4 hours."> Less than 4 hours.<br><br>
+
+            <label>5. How often do you participate in physical activities, such as exercise or sports?</label><br>
+            <input type="radio" name="physicalActivity" value="Almost daily." required> Almost daily.<br>
+            <input type="radio" name="physicalActivity" value="2-3 times a week."> 2-3 times a week.<br>
+            <input type="radio" name="physicalActivity" value="Rarely, maybe once a week."> Rarely, maybe once a week.<br>
+            <input type="radio" name="physicalActivity" value="Never, I don’t have time for it."> Never, I don’t have time for it.<br><br>
+
+            <label>6. How would you describe your current social life?</label><br>
+            <input type="radio" name="socialLife" value="Very active, I socialize regularly." required> Very active, I socialize regularly.<br>
+            <input type="radio" name="socialLife" value="Satisfactory, I meet friends occasionally."> Satisfactory, I meet friends occasionally.<br>
+            <input type="radio" name="socialLife" value="Could be better, I don’t have much time."> Could be better, I don’t have much time.<br>
+            <input type="radio" name="socialLife" value="Poor, I feel isolated."> Poor, I feel isolated.<br><br>
+
+            <label>7. How often do you feel anxious or worried about your future?</label><br>
+            <input type="radio" name="futureAnxiety" value="Rarely, I’m confident about my future." required> Rarely, I’m confident about my future.<br>
+            <input type="radio" name="futureAnxiety" value="Sometimes, but it doesn’t affect me much."> Sometimes, but it doesn’t affect me much.<br>
+            <input type="radio" name="futureAnxiety" value="Frequently, it causes me stress."> Frequently, it causes me stress.<br>
+            <input type="radio" name="futureAnxiety" value="Almost always, I’m very anxious."> Almost always, I’m very anxious.<br><br>
+
+            <label>8. How do you usually handle academic or work-related pressure?</label><br>
+            <input type="radio" name="pressureHandling" value="I stay calm and plan my tasks well." required> I stay calm and plan my tasks well.<br>
+            <input type="radio" name="pressureHandling" value="I talk to friends or colleagues for support."> I talk to friends or colleagues for support.<br>
+            <input type="radio" name="pressureHandling" value="I procrastinate and then rush."> I procrastinate and then rush.<br>
+            <input type="radio" name="pressureHandling" value="I get very anxious and struggle to cope."> I get very anxious and struggle to cope.<br><br>
+
+            <label>9. How often do you take breaks during long work or study sessions?</label><br>
+            <input type="radio" name="breaks" value="Every hour or so." required> Every hour or so.<br>
+            <input type="radio" name="breaks" value="Every few hours."> Every few hours.<br>
+            <input type="radio" name="breaks" value="Rarely, I try to power through."> Rarely, I try to power through.<br>
+            <input type="radio" name="breaks" value="Never, I feel guilty taking breaks."> Never, I feel guilty taking breaks.<br><br>
+
+            <label>10. How satisfied are you with your current financial situation?</label><br>
+            <input type="radio" name="financialSatisfaction" value="Very satisfied, I have enough to meet my needs." required> Very satisfied, I have enough to meet my needs.<br>
+            <input type="radio" name="financialSatisfaction" value="Moderately satisfied, but it can be tight sometimes."> Moderately satisfied, but it can be tight sometimes.<br>
+            <input type="radio" name="financialSatisfaction" value="Not very satisfied, I often struggle to manage."> Not very satisfied, I often struggle to manage.<br>
+            <input type="radio" name="financialSatisfaction" value="Dissatisfied, I’m constantly worried about finances."> Dissatisfied, I’m constantly worried about finances.<br><br>
+
+            <button type="submit">GO!</button>
+        </form>
+        <!-- Form End -->
+        <div id="result" style="margin-top: 20px; font-size: 18px; font-weight: bold; color: #333;"></div>
+
+    </div>
+
+    <footer>
+        <p>© 2024 Execute Humane | Enhancing Mental Well-Being</p>
+    </footer>
+    
+
+</body>
+</html>
+
+
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Enhancer</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* General Reset and Global Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: #e3f2fd;
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* Header Styling */
+        header {
+            width: 100%;
+            background: #ff7e5f;
+            padding: 60px 40px;
+            color: white;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #333333;
+        }
+
+        header p {
+            font-size: 1rem;
+            margin-top: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            width: 100%;
+            text-align: center;
+            padding: 40px;
+            background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
+            color: white;
+            box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+        }
+
+        .hero h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .hero input {
+            padding: 10px;
+            width: 250px;
+            border-radius: 5px;
+            border: none;
+            font-size: 1rem;
+        }
+
+        .hero button {
+            padding: 10px 20px;
+            margin-left: 10px;
+            font-size: 1rem;
+            border: none;
+            border-radius: 5px;
+            background-color: #feb47b;
+            color: white;
+            cursor: pointer;
+        }
+
+        .hero button:hover {
+            background-color: #ff7e5f;
+        }
+
+        /* Main Content */
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin: 20px 40px;
+        }
+
+        .card {
+            background: linear-gradient(135deg,#c0c0c0,#000000);
+            color : white;
+            width: 300px;
+            margin: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            transition: transform 0.3s ease;
+        }
+        .card :hover {
+            transform : scale(1.05);
+            box-shadow : 0 6px 12px rgba(0,0,0,0.3);
+
+        }
+
+        .card img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+        .card img:hover {
+            transform: scale(1.1); /* Slight zoom effect */
+        }
+
+
+        .card h3 {
+            font-size: 1.5rem;
+            margin: 20px;
+        }
+
+        .card ul {
+            list-style: none;
+            padding: 0 20px 20px;
+        }
+
+        .card ul li {
+            font-size: 1rem;
+            margin-bottom: 10px;
+        }
+
+        .card a {
+            display: inline-block;
+            margin: 20px;
+            color: #ff7e5f;
+            font-weight: bold;
+            text-decoration: none;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        /* Footer Styling */
+        footer {
+            width: 100%;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        /* Media Queries */
+        @media (max-width: 768px) {
+            header h1 {
+                font-size: 2rem;
+            }
+
+            header p {
+                font-size: 0.9rem;
+            }
+
+            .hero h2 {
+                font-size: 1.5rem;
+            }
+
+            .hero input {
+                width: 200px;
+            }
+
+            .hero button {
+                padding: 8px 16px;
+                font-size: 0.9rem;
+            }
+
+            .content {
+                margin: 10px;
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .card {
+                width: 90%;
+            }
+        }
+
+        @media (max-width: 480px) {
+            header h1 {
+                font-size: 1.8rem;
+            }
+
+            header p {
+                font-size: 0.8rem;
+            }
+
+            .hero h2 {
+                font-size: 1.2rem;
+            }
+
+            .hero input {
+                width: 180px;
+                padding: 8px;
+            }
+
+            .hero button {
+                font-size: 0.8rem;
+                padding: 8px 12px;
+            }
+
+            .card h3 {
+                font-size: 1.2rem;
+            }
+
+            .card ul li {
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div>
+            <h1>Enchane Your Mood Like Never Before</h1>
+            <p>Discover activities, music, yoga, and games to uplift your mood . . . . . . </p>
+        </div>
+    </header>
+   
+
+    <div class="hero">
+        <h2>Enhance Your Mood Instantly</h2>
+        <input type="text" placeholder="Search for music, yoga, games...">
+        <button>Search</button>
+    </div>
+
+    <main class="content">
+        <!-- Card 1 -->
+        <div class="card">
+            <img src="/static/img/music.jpg" alt="Music">
+            <h3>Mood Enhancing Music</h3>
+            <ul>
+                <li><a href="https://youtu.be/-ZT5g0Ahuvg" target="_blank">Relaxing Music for Stress Relief</a></li>
+                <li><a href="https://youtu.be/ePy6RggAcpE" target="_blank">Peaceful Piano Music</a></li>
+                <li><a href="https://youtu.be/4GnVDPD01as" target="_blank">Ambient Study Music</a></li>
+            </ul>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <img id = "yoga" style="cursor: pointer;" src="/static/img/yoga.jpg" alt="Yoga">
+            <h3>Top Yoga Poses</h3>
+            <ul>
+                <li>Surya Namaskar</li>
+                <li>Shavasana</li>
+                <li>Trikonasana</li>
+            </ul>
+            <a href="https://youtu.be/MxE089zVL-A" target="_blank">View Video</a>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <img class = "Excercise"src="/static/img/exercise 2.jpg" alt="Exercises">
+            <h3>Exercises</h3>
+            <ul>
+                <li>Jumping Jacks</li>
+                <li>Push-ups</li>
+                <li>Plank</li>
+            </ul>
+            <a href="https://youtu.be/AzV3EA-1-yM" target="_blank">View Video</a>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="card">
+            <img class = "Games" src="/static/img/games.jpg" alt="Games">
+            <h3>Mood Enhancing Games</h3>
+            <ul>
+                <li>Headspace App</li>
+                <li>Puzzle Games</li>
+                <li>Relaxation Coloring</li>
+            </ul>
+            <a href="https://sudoku.com/" target="_blank">Explore Games</a>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Mood Enhancer. All rights reserved.</p>
+    </footer>
+
+</body>
+<script src="sound.js"></script>
+
+</html>
+
+
