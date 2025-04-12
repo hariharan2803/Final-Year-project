@@ -1,0 +1,320 @@
+/* General Reset and Global Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background: #A7C7E7;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+}
+
+header {
+    background-image: url("/static/img/header.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 300px; /* Adjust this value */
+    position: relative;
+    color: black;
+    text-align: center;
+    padding: 100px 20px;
+}
+header h1{
+    font-weight: 900px;
+    
+}
+header p{
+    text-shadow: 2px 2px 8px rgba(0, 0, 2, 0.8);
+    font-weight: bold;
+    color: white;
+}
+.parent-container { /* The div wrapping .shade */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.shade {
+    background-color: rgba(209, 196, 196, 0.8);
+    border-radius: 60px;
+    width: 90%;
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+
+
+/* Hero Section */
+.hero {
+    width: 100%;
+    text-align: center;
+    padding: 40px;
+    background: url('https://via.placeholder.com/1500x400') no-repeat center center/cover;
+    color: white;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+}
+
+.hero h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.hero input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 5px;
+    border: none;
+    font-size: 1rem;
+}
+
+.hero button {
+    padding: 10px 20px;
+    margin-left: 10px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 5px;
+    background-color: #feb47b;
+    color: white;
+    cursor: pointer;
+}
+
+.hero button:hover {
+    background-color: #ff7e5f;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Aligns evenly when full */
+    gap: 20px;
+    padding: 20px;
+    max-width: 100%;
+}
+
+/* 🖥️ Default: 3 cards per row */
+.card {
+    flex: 1 1 calc(33.33% - 20px);
+    min-width: 280px;
+    max-width: 400px;
+    background: linear-gradient(135deg, #c0c0c0, #000000);
+    color: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px;
+    min-width: 0;
+}
+
+
+/* Hover Effects */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card img:hover {
+    transform: scale(1.1);
+}
+
+.card a:hover {
+    transform: translateY(-5px) scale(1.1); /* Moves up and enlarges */
+    text-shadow: 0px 0px 8px rgba(159, 153, 132, 0.8);
+}
+
+/* Content Styling */
+.card h3 {
+    font-size: 1.5rem;
+    margin: 20px;
+}
+
+.card ul {
+    list-style: none;
+    padding: 0 20px 20px;
+}
+
+.card ul li {
+    font-size: 1rem;
+    margin-bottom: 10px;
+}
+
+.card a {
+    display: inline-block;
+    margin: 20px;
+    color: #ff7e5f;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+/* Special Styling for 5th Card */
+.card:nth-child(5) select {
+    width: 90%;
+    margin: 10px 0;
+    padding: 5px;
+    font-size: 1rem;
+    margin-left: 15px;
+}
+
+.card:nth-child(5) label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    margin-left: 20px;
+}
+
+.custom-button {
+    display: block;
+    width: 350px; /* Increase from 300px to 350px */
+    margin: 50px auto; /* More spacing below the cards */
+    padding: 20px 25px; /* Increased padding for more height */
+    font-size: 20px; /* Bigger text for better readability */
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px; /* Slightly more rounded corners */
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Blue gradient */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+}
+
+.custom-button:hover {
+    transform: scale(1.12); /* Slightly bigger pop-up effect */
+    background: linear-gradient(135deg, #0056b3, #003d80); /* Darker gradient */
+}
+
+.button-container {
+    text-align: center; /* Center the button */
+    margin-top: 20px; /* Adds spacing between the shade and the button */
+}
+
+.report-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.report-btn:hover {
+    background-color: #218838;
+}
+
+
+
+/* Footer Styling */
+footer {
+    width: 100%;
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+footer p {
+    margin: 0;
+    font-size: 0.9rem;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    .hero h2 {
+        font-size: 1.5rem;
+    }
+
+    .hero input {
+        width: 200px;
+    }
+
+    .hero button {
+        padding: 8px 16px;
+        font-size: 0.9rem;
+    }
+
+    .cards-container {
+        gap: 30px; /* Moderate spacing */
+    }
+
+    .card ul li {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header p {
+        font-size: 0.8rem;
+    }
+
+    .hero h2 {
+        font-size: 1.2rem;
+    }
+
+    .hero input {
+        width: 180px;
+        padding: 8px;
+    }
+
+    .hero button {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+
+    .card ul li {
+        font-size: 0.9rem;
+    }
+    .cards-container {
+        gap: 15px; /* Moderate spacing */
+    }
+}
+
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(50% - 20px);
+    }
+    .cards-container {
+        gap: 60px; /* Moderate spacing */
+    }
+}

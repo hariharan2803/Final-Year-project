@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Report</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/report.css') }}">
+</head>
+<body>
+    <div class="report-container">
+        <h1>Stress Report</h1>
+        <div class="report-content">
+            <p><strong>User : </strong> {{ user_name }}</p>
+            <p><strong>Stress Level : </strong> {{ stress_level }}</p>
+            <p class="recommendation"><strong>Recommendation : </strong> {{ message }}</p>
+        </div>
+        <a href="javascript:history.back();">
+            <button class="back-btn">Back</button>
+        </a>
+    </div>
+    <script>
+        if (document.referrer) {
+            history.replaceState({}, '', document.referrer);
+        }
+    </script>
+    
+    
+</body>
+</html>

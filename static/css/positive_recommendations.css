@@ -1,0 +1,220 @@
+/* General Reset */
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #A7C7E7;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-image: url("/static/img/positive_header.webp");
+    background-size: cover;  /* Ensures the image covers the entire area */
+    background-position: center; /* Centers the image properly */
+    background-repeat: no-repeat; /* Prevents repetition */
+    text-align: center;
+    padding: 250px 0; /* Keeps increased height for better visibility */
+    font-size: 28px;
+    width: 100%; /* Ensures full width */
+    height: auto; /* Allows height to be dynamic */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+
+/* Main Content Wrapper */
+.main-content {
+    flex: 1;
+    width: 85%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+/* Cards Section */
+.cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Increased spacing for a clean look */
+    flex-wrap: wrap;
+    margin-top: 30px;
+    margin-bottom: 50px; /* Added extra space below cards */
+}
+
+/* 🖥️ 2 cards per row */
+/* 🖥️ 2 cards per row - Flexible & Centered Content */
+.card {
+    flex: 1 1 calc(50% - 20px); /* 2 cards per row with spacing */
+    min-width: 300px;
+    max-width: 500px;
+    background: linear-gradient(135deg, #F8F9FA, #ECECEC);
+    color: #6c5d5d; /* Fallback solid grey */
+
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    min-height: 420px; /* Ensure a minimum height */
+    justify-content: space-between; /* Distribute content evenly */
+    padding: 20px; /* Add padding for better spacing */
+}
+
+/* Image Styling - Full Width */
+.card img {
+    width: 100%;
+    height: 200px; /* Set a fixed height for consistency */
+    object-fit: cover; /* Ensures the image fills the space without distortion */
+    display: block; /* Removes any unwanted spacing */
+}
+
+
+
+/* Centered Content */
+.card-content {
+    flex: 1; /* Allows flexible content sizing */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers the text */
+    align-items: center; /* Aligns text to the center */
+    text-align: center; /* Ensures centered text */
+    padding: 15px;
+    gap: 10px; /* Adds minimal clean space between content */
+}
+
+.card-content p, 
+.card-content li {
+    margin-bottom: 6px; /* Provides subtle spacing between points */
+    line-height: 1.6; /* Improves readability without affecting alignment */
+}
+
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.card-content {
+    padding: 15px;
+    flex-grow: 1; /* Ensures content fills space properly */
+}
+
+.card h3 {
+    color: black;
+    margin-top: 10px;
+}
+
+.card ul {
+    list-style: none; /* Removes dots */
+    padding-left: 4px; /* Aligns text properly */
+}
+
+.card ul li {
+    margin-bottom: 15px; /* Increased spacing for better readability */
+    line-height: 1.6; 
+}
+
+.card a {
+    color: #c64141; /* Default text color (light shining grey) */
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.3s ease-out, color 0.3s ease-out, text-shadow 0.3s ease-out;
+}
+
+.card a:hover {
+    color: #444; /* Slightly darker grey for hover */
+    transform: translateY(-3px) scale(1.1); /* Moves up slightly & enlarges smoothly */
+    text-shadow: 0px 4px 10px rgba(200, 200, 200, 0.7); /* Soft glowing effect */
+}
+
+.card a:hover {
+    text-decoration: none;
+}
+
+.custom-button {
+    display: block;
+    width: 350px; /* Increase from 300px to 350px */
+    margin: 50px auto; /* More spacing below the cards */
+    padding: 20px 25px; /* Increased padding for more height */
+    font-size: 20px; /* Bigger text for better readability */
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    border-radius: 10px; /* Slightly more rounded corners */
+    background: linear-gradient(135deg, #007BFF, #0056b3); /* Blue gradient */
+    color: white;
+    cursor: pointer;
+    transition: transform 0.3s ease, background 0.3s ease;
+    text-decoration: none;
+}
+
+.custom-button:hover {
+    transform: scale(1.12); /* Slightly bigger pop-up effect */
+    background: linear-gradient(135deg, #0056b3, #003d80); /* Darker gradient */
+}
+
+.report-btn {
+    padding: 15px 30px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: #28a745;
+    color: white;
+    transition: 0.3s;
+    display: inline-block;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+    margin-top : 60px;
+}
+
+.report-btn:hover {
+    background-color: #218838;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .main-content {
+        width: 90%;
+    }
+    .card {
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) {
+    .search-bar input {
+        width: 70%;
+    }
+    .card {
+        width: 45%;
+    }
+}
+
+@media (max-width: 600px) {
+    .card {
+        width: 100%;
+    }
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 12px;
+    background-color: #222;
+    color: white;
+    width: 100%;
+    margin-top: auto;
+    position: relative; /* Ensures it stays at the bottom without overlapping */
+}
+
+
+

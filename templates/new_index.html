@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stress Detection System</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/new_styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Stress Detection System</h1>
+        <textarea id="user-input" rows="4" cols="50" placeholder="Enter your text here..."></textarea>
+        <div class="buttons">
+            <button class="btn" onclick="analyzeStress()">Analyze Stress Level</button>
+            <button class="btn" onclick="showVisualization()">Show Stress Trend</button>
+        </div>
+        <p id="result"></p>
+        <div id="visualization">
+            <img id="trend-image" src="" alt="Stress Trend" style="display:none; width: 100%; margin-top: 20px;">
+        </div>
+    </div>
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>

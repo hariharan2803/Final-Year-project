@@ -1,0 +1,91 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url("/static/img/report_background.jpg");
+    color: #333;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Report Container */
+.report-container {
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 50%;
+    max-width: 600px;
+    transition: 0.3s;
+}
+
+.report-container:hover {
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+h1 {
+    color: #2c3e50; /* Dark blue-gray */
+    font-size: 26px;
+    margin-bottom: 15px;
+}
+
+/* Report Content */
+.report-content {
+    font-size: 18px;
+    line-height: 1.6;
+}
+
+.report-content p {
+    margin: 10px 0;
+}
+
+.recommendation {
+    font-weight: bold;
+    color: #1b6ca8; /* Deep blue for emphasis */
+}
+
+/* Back Button */
+.back-btn {
+    margin-top: 20px;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #27ae60; /* Green for positivity */
+    color: white;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.2s ease;
+    box-shadow: 2px 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.back-btn:hover {
+    background-color: #219150;
+    transform: translateY(-2px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .report-container {
+        width: 80%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 22px;
+    }
+
+    .report-content {
+        font-size: 16px;
+    }
+
+    .back-btn {
+        font-size: 14px;
+        padding: 10px 16px;
+    }
+}
